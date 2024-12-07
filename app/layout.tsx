@@ -22,32 +22,32 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <SignedOut>
-          <div className="flex items-center justify-center flex-col">
-            <div className="flex flex-col items-center mb-16">
-              <Image
-                src="/newt-ai-logo.png"
-                width={500}
-                height={100}
-                alt="Logo"
-                className="max-w-lg object-contain"
-              />
-              <p className="text-center text-xl text-purple-400">
-                Your AI powered sales assistant! Embed Newt AI into any website
-                with just a snippet of code!
-              </p>
-            </div>
-            <SignIn routing="hash" />
-          </div>
-        </SignedOut>
-        <SignedIn>
-          <body>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
+        <body>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <SignedOut>
+              <div className="flex items-center justify-center flex-col">
+                <div className="flex flex-col items-center mb-16">
+                  <Image
+                    src="/newt-ai-logo.png"
+                    width={500}
+                    height={100}
+                    alt="Logo"
+                    className="max-w-lg object-contain"
+                  />
+                  <p className="text-center text-xl text-purple-400">
+                    Your AI powered sales assistant! Embed Newt AI into any
+                    website with just a snippet of code!
+                  </p>
+                </div>
+                <SignIn routing="hash" />
+              </div>
+            </SignedOut>
+            <SignedIn>
               <SidebarProvider>
                 <AppSidebar />
                 <main>
@@ -56,9 +56,9 @@ export default function RootLayout({
                   <Toaster />
                 </main>
               </SidebarProvider>
-            </ThemeProvider>
-          </body>
-        </SignedIn>
+            </SignedIn>
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   );

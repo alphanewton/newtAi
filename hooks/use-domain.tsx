@@ -5,7 +5,10 @@ import { string, z } from "zod";
 import { usePathname, useRouter } from "next/navigation";
 import { useToast } from "./use-toast";
 import { useEffect, useState } from "react";
-import { onDeleteDomainAction, onIntegrateDomain } from "@/actions/settings";
+import {
+  onDeleteDomainAction,
+  onIntegrateDomain,
+} from "@/actions/chatbot-config";
 
 export const AddDomainSchema = z.object({
   domain: z

@@ -33,20 +33,20 @@ const items = [
     icon: Home,
   },
   {
-    title: "Training",
-    url: "/training",
+    title: "Chatbots",
+    url: "/chatbots",
     icon: Bot,
   },
 
   {
-    title: "Conversation",
-    url: "/",
+    title: "Conversations",
+    url: "/conversations",
     icon: Inbox,
   },
 
   {
     title: "Appointment",
-    url: "/",
+    url: "/appointment",
     icon: Calendar,
   },
 
